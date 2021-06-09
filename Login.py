@@ -1,30 +1,25 @@
 from tkinter import *
 from PIL import Image, ImageTk, ImageDraw
- from datetime import *
- import time
- from math import *
- from tkinter import messagebox
- from playsound import playsound
- import pymysql
+from datetime import *
+import time
+from math import *
+from tkinter import messagebox
+from playsound import playsound
+import pymysql
 
-
- class Login_window:                                                                                                                                                                     Inventory Login")
-     def __init__(self, root):
+class Login_window:                                                                                                                                                                     Inventory Login")
+    def __init__(self, root):
          self.root = root
-         self.root.title(
-             "                                                                                                                                                                       Inventory Login"
-         )
+         self.root.title(  
+                                                                                                                                                                                    "Inventory Login")
          self.root.geometry("1350x700+0+0")
          self.root.config(bg="#021e2f")
- 
-         # ===================Background Colours=========================================================
+        # ===================Background Colours=========================================================
          left_lbl = Label(self.root, bg="#08A3D2", bd=0)
          left_lbl.place(x=0, y=0, relheight=1, width=600)
- 
          right_lbl = Label(self.root, bg="#031F3C", bd=0)
          right_lbl.place(x=600, y=0, relheight=1, relwidth=1)
- 
-         # ===================Frames=========================================================
+        # ===================Frames=========================================================
          login_frame = Frame(self.root, bg="white")
          login_frame.place(x=250, y=100, width=800, height=500)
          title = Label(
