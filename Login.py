@@ -10,19 +10,14 @@ from playsound import playsound
 
 
 class Login_window:
-
-     def __init__(self, root):
-         self.root = root
-         self.root.title(" Inventory Login")
-         self.root.geometry("1350x700+0+0")
-         self.root.config(bg="#021e2f")
- 
- 
-         # ===================Frames=========================================================
+    def __init__(self, root):
+        self.root = root
+        self.root.title(" Inventory Login")
+        self.root.geometry("1350x700+0+0")
+        self.root.config(bg="#021e2f")
+        # ===================Frames=========================================================
          login_frame = Frame(self.root, bg="white")
          login_frame.place(x=250, y=100, width=800, height=500)
- 
-
          title = Label(
              login_frame,
              text="LOGIN HERE",
@@ -30,9 +25,7 @@ class Login_window:
              bg="white",
              fg="#08A3D2",
          ).place(x=250, y=50)
- 
-
-         email = Label(
+             email = Label(
              login_frame,
              text="EMAIL ADDRESS",
              font=("Times New Roman", 18, "bold"),
@@ -43,9 +36,7 @@ class Login_window:
              login_frame, font=("Times New Roman", 15), bg="lightgray"
          )
          self.txt_email.place(x=250, y=180, width=350, height=35)
- 
-
-         pass_ = Label(
+             pass_ = Label(
              login_frame,
              text="PASSWORD",
              font=("Times New Roman", 18, "bold"),
@@ -56,9 +47,7 @@ class Login_window:
              login_frame, font=("Times New Roman", 15), bg="lightgray"
          )
          self.txt_pass_.place(x=250, y=280, width=350, height=35)
- 
-
-         btn_reg = Button(
+             btn_reg = Button(
              login_frame,
              cursor="hand2",
              command=self.register_window,
@@ -68,9 +57,7 @@ class Login_window:
              bd=0,
              fg="#B00857",
          ).place(x=250,  y=320)
- 
-
-         btn_login = Button(
+             btn_login = Button(
              login_frame,
              text="Login",
              command=self.login,
@@ -79,15 +66,13 @@ class Login_window:
              bg="#B00857",
              cursor="hand2",
          ).place(x=250, y=380, width=180, height=40)
- 
-
-IMS Clock", font=("Book Antiqua", 25, "bold"), fg="white", compound=BOTTOM, bg="#081923", bd=0)
+ IMS Clock", font=("Book Antiqua", 25, "bold"), fg="white", compound=BOTTOM, bg="#081923", bd=0)
          playsound("Login.mp3")
          # ===================Clock=========================================================
          self.lbl = Label(
              self.root,
              text="
-IMS Clock",
+             IMS Clock",
              font=("Book Antiqua", 25, "bold"),
              fg="white",
              compound=BOTTOM,
@@ -96,12 +81,10 @@ IMS Clock",
          )
          self.lbl.place(x=90, y=120, height=450, width=350)
          self.working()
- 
-     def register_window(self):
+ def register_window(self):
          self.root.destroy()
          import inventorylogin
- 
-     def login(self):
+ def login(self):
          if self.txt_email.get() == "" or self.txt_pass_.get() == "":
              playsound("Nameerror.mp3")
              messagebox.showerror("Error", "All fields are required", parent=self.root)
@@ -118,7 +101,6 @@ IMS Clock",
                  )
                  row = cur.fetchone()
                  print(row)
-
                  if row == None:
                      playsound("Nameerror.mp3")
                      messagebox.showerror(
