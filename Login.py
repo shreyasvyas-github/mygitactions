@@ -7,9 +7,6 @@ from tkinter import messagebox
 import pymysql
 from PIL import Image, ImageTk,ImageDraw
 from playsound import playsound
-
-
-
 class Login_window:
     def __init__(self, root):
         self.root = root
