@@ -67,7 +67,7 @@ class Login_window:
              bg="white",
              bd=0,
              fg="#B00857",
-         ).place(x=250, y=320)
+         ).place(x=250,  y=320)
  
 
          btn_login = Button(
