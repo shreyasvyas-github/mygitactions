@@ -1,11 +1,13 @@
-from tkinter import *
-from PIL import Image, ImageTk, ImageDraw
-from datetime import *
-import time
-from math import *
-from tkinter import messagebox
-from playsound import playsound
-import pymysql
+ import time
+ from datetime import *
+ from math import *
+ from tkinter import *
+ from tkinter import messagebox
+
+ import pymysql
+ from PIL import Image, ImageDraw, ImageTk
+ from playsound import playsound
+
 
 class Login_window:                                                                                                                                                                     Inventory Login")
     def __init__(self, root):
