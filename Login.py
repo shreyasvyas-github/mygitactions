@@ -140,59 +140,7 @@ IMS Clock",
                      "Error", f"Error Due to: {str(es)}", parent=self.root
                  )
  
-     def clock_image(self, hr, min_, sec_):
-
-         clock = Image.new("RGB", (400, 400), (8, 25, 35))
-         draw = ImageDraw.Draw(clock)
-         # =====================For clock image
-         bg = Image.open("C:/Users/DELL/Desktop/images/cl5.png")
-         bg = bg.resize((300, 300), Image.ANTIALIAS)
-         clock.paste(bg, (50, 50))
-
-         # formula to rotate the anticlock
-         # angle_in_radians = angle_in_degree * math.pi/180
-         # line length=100
-         # center_x=100
-         # center_y=100
-         # end_x=center_x + line_length * math.cos(angle_in_radians)
-         # end_y=center_y - line_length * math.sin(angle_in_radians)
- 
-
-         # ==========Hour  line image========
-         origin = 200, 200
-         draw.line(
-             (origin, 200 + 50 * sin(radians(hr)), 200 - 50 * cos(radians(hr))),
-             fill="#DF005E",
-             width=4,
-         )
-         # ==========Minute   line image========
-
-         draw.line(
-             (origin, 200 + 80 * sin(radians(min_)), 200 - 80 * cos(radians(min_))),
-             fill="black",
-             width=3,
-         )
-         # ==========Second  line image========
-
-         draw.line(
-             (origin, 200 + 100 * sin(radians(sec_)), 200 - 100 * cos(radians(sec_))),
-             fill="yellow",
-            width=2,
-         )
-         draw.ellipse((195, 195, 210, 210), fill="black")
-         clock.save("C:/Users/DELL/Desktop/images/clock_new.png")
- 
-
-        h = datetime.now().time().hour
-        m = datetime.now().time().minute
-        s = datetime.now().time().second
-        hr = (h / 12) * 360
-        min_ = (m / 60) * 360
-        sec_ = (s / 60) * 360
-        self.clock_image(hr, min_, sec_)
-        self.img = ImageTk.PhotoImage(file="C:/Users/DELL/Desktop/images/clock_new.png")
-        self.lbl.config(image=self.img)
-        self.lbl.after(200, self.working)
+     
  
 root = Tk()
 obj = Login_window(root)
